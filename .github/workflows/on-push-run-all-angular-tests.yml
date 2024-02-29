@@ -19,16 +19,18 @@ jobs:
       - name: Install Angular CLI
         run: npm install -g @angular/cli
 
+      - name: Install Angular dependencies
+        run: npm install --prefix ${{ github.workspace }}/front
+
       - name: Change directory to Angular project root and run npm commands
         run: |
           cd ${{ github.workspace }}/front
           pwd
           ls -l
-          npm install
           npm test
 
       - name: Archive Angular test coverage report
         uses: actions/upload-artifact@v2
         with:
           name: angular-coverage-report
-          path: coverage
+          path: ${{ github.workspace }}/front/coverage
