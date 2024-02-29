@@ -18,7 +18,7 @@ jobs:
         run: ls -l
 
       - name: Change directory to Angular project root
-        run: ${{ github.workspace }}/front
+        run: cd ${{ github.workspace }}/front
 
       - name: Debug current directory 2
         run: pwd
