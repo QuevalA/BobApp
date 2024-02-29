@@ -11,14 +11,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Debug current directory
+      - name: Debug current directory 1
         run: pwd
 
-      - name: List contents of current directory
+      - name: List contents of current directory 1
         run: ls -l
 
       - name: Change directory to Angular project root
         run: cd front
+
+      - name: Debug current directory 2
+        run: pwd
+
+      - name: List contents of current directory 2
+        run: ls -l
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
@@ -30,6 +36,12 @@ jobs:
 
       - name: Install Angular dependencies
         run: npm install
+
+      - name: Debug current directory 3
+        run: pwd
+
+      - name: List contents of current directory 3
+        run: ls -l
 
       - name: Run Angular tests
         run: npm test
