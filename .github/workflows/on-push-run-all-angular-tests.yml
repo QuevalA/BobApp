@@ -11,21 +11,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Debug current directory 1
-        run: pwd
-
-      - name: List contents of current directory 1
-        run: ls -l
-
-      - name: Change directory to Angular project root
-        run: cd ${{ github.workspace }}/front
-
-      - name: Debug current directory 2
-        run: pwd
-
-      - name: List contents of current directory 2
-        run: ls -l
-
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
@@ -34,17 +19,13 @@ jobs:
       - name: Install Angular CLI
         run: npm install -g @angular/cli
 
-      - name: Install Angular dependencies
-        run: npm install
-
-      - name: Debug current directory 3
-        run: pwd
-
-      - name: List contents of current directory 3
-        run: ls -l
-
-      - name: Run Angular tests
-        run: npm test
+      - name: Change directory to Angular project root and run npm commands
+        run: |
+          cd ${{ github.workspace }}/front
+          pwd
+          ls -l
+          npm install
+          npm test
 
       - name: Archive Angular test coverage report
         uses: actions/upload-artifact@v2
