@@ -1,4 +1,4 @@
-name: On push - Run all Java and Angular tests
+name: On push - Run all Java tests
 
 on: [ push ]
 
