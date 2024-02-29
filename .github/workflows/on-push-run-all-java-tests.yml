@@ -24,8 +24,8 @@ jobs:
         run: mvn -B clean verify
         working-directory: back
 
-      - name: Archive test results
+      - name: Upload Jacoco code coverage report
         uses: actions/upload-artifact@v2
         with:
-          name: test-results
-          path: back/target/surefire-reports
+          name: jacoco-report
+          path: back/target/site/jacoco/index.html
