@@ -4,7 +4,7 @@ on: [ push ]
 
 jobs:
   build:
-    name: Build and Test Angular
+    name: Build and test Angular
     runs-on: ubuntu-latest
 
     steps:
