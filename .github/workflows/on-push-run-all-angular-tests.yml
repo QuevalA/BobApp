@@ -11,29 +11,29 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # Change directory to Angular project root
+      - name: Debug current directory
+        run: pwd
+
+      - name: List contents of current directory
+        run: ls -l
+
       - name: Change directory to Angular project root
         run: cd front
 
-      # Install Node.js and npm
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '14.x'
 
-      # Install Angular CLI
       - name: Install Angular CLI
         run: npm install -g @angular/cli
 
-      # Install Angular dependencies
       - name: Install Angular dependencies
         run: npm install
 
-      # Run Angular tests
       - name: Run Angular tests
         run: npm test
 
-      # Archive Angular test coverage report
       - name: Archive Angular test coverage report
         uses: actions/upload-artifact@v2
         with:
