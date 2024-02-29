@@ -7,7 +7,12 @@ describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AppComponent],
-      imports: [HttpClientTestingModule],
+      imports: [HttpClientTestingModule,
+      MatToolbarModule,
+      MatIconModule,
+      MatDividerModule,
+      MatCardModule,
+      MatButtonModule],
       providers: [JokesService]
     }).compileComponents();
   });
