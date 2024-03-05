@@ -34,4 +34,4 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Bobapp-SonarQube-1 -Dsonar.projectName='Bobapp SonarQube 1' -f back/pom.xml
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Bobapp-SonarQube-3 -Dsonar.projectName='Bobapp SonarQube 3' -f back/pom.xml
