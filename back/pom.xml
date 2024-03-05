@@ -59,4 +59,12 @@
             </plugin>
         </plugins>
     </build>
+    <profiles>
+        <profile>
+            <id>sonar</id>
+            <properties>
+                <java.version>17</java.version>
+            </properties>
+        </profile>
+    </profiles>
 </project>
