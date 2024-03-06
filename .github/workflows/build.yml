@@ -1,4 +1,4 @@
-name: SonarCloud Analysis - monorepo
+name: SonarCloud Analysis - monorepo #manual trigger
 
 on:
   push:
