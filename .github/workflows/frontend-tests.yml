@@ -1,6 +1,9 @@
-name: On push - Run all Angular tests
+name: Run front end tests
 
-on: [ push ]
+on:
+  push:
+    branches:
+      - "main"
 
 jobs:
   build:

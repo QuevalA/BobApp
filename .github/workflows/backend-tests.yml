@@ -1,6 +1,9 @@
-name: On push - Run all Java tests
+name: Run back end tests
 
-on: [ push ]
+on:
+  push:
+    branches:
+      - "main"
 
 jobs:
   build:

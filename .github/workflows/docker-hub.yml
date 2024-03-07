@@ -1,4 +1,4 @@
-name: On push main - Push images to Docker Hub
+name: Push images to Docker Hub
 
 on:
   push:
