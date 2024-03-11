@@ -28,11 +28,7 @@ jobs:
       - name: Change directory to Angular project root and run npm commands
         run: |
           cd ${{ github.workspace }}/front
-          pwd
-          ls -l
-          echo "[CUSTOM ECHO] Running npm test command..."
           npm test
-          echo "[CUSTOM ECHO] Finished npm test command."
 
       - name: Archive Angular test coverage report
         uses: actions/upload-artifact@v2
