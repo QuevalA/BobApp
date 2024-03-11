@@ -20,9 +20,6 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
 
-      - name: Change directory to Java project root
-        run: cd back
-
       - name: Build and test Java project
         run: mvn -B clean verify
         working-directory: back
