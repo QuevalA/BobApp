@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: '14.x'
 
@@ -31,7 +31,7 @@ jobs:
           npm test
 
       - name: Archive Angular test coverage report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: angular-coverage-report
           path: ${{ github.workspace }}/front/coverage/bobapp/index.html
